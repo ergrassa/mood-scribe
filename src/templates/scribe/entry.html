@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'scribe/flex.css' %}">
+  </head>
+  <body>
+    {% csrf_token %}
+    <div class="flex-cont">
+    <img class="flex-center" src="data:image/png;base64,{{plot}}" class="center"/>
+    <img class="flex-center" src="data:image/png;base64,{{hist}}" class="center"/>
+    <a href="../" class="go-bt">Add another record</a>
+    </div>
+  </body>
+</html>

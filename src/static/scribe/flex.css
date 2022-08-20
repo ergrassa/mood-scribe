@@ -1,0 +1,258 @@
+body {
+    background: rgb(170,170,170);
+    background: linear-gradient(180deg, rgb(207, 207, 207) 0%, rgb(163, 163, 163) 35%, rgb(92, 92, 92) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.flex-cont {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0.2em 1em;
+}
+.flex-cats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+}
+.flex-rows {
+    display: flex;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+.col-head {
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+    color: black;
+    text-transform: capitalize;
+    align-self: center;
+}
+.msg {
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+    color: black;
+    align-self: stretch;
+    /* height: 1em; */
+    border: 1px solid #aaa;
+    border-radius: 0.5em;
+    text-align: center;
+    margin: 0.1em 2em;
+    padding: 0.1em;
+    background-color: #ddd;
+}
+.bt {
+    display: flex;
+}
+.bt-in {
+    display: none;
+}
+.bt-in:hover+label {
+    background-color: blueviolet;
+}
+.bt-in:checked+label{
+    background-color: violet;
+}
+.bt-lab {
+    display: flex;
+    padding: 0.2em;
+    margin: 0.2em;
+    border: 1px solid dimgray;
+    border-radius: 0.5em;
+    font-size: xx-large;
+    font-family: sans-serif;
+    justify-content: center;
+}
+.go {
+    display: none;
+}
+.go+label {
+    background-color: #595;
+    color: white;
+    border-color: #555
+}
+.go:hover+label {
+    background-color: #5ca;
+    border-color: #7fe;
+}
+.go:active+label {
+    background-color: #7fe;
+}
+.go-lab {
+    display: block;
+    padding: 0.5em;
+    margin: 0.5em 2em;
+    border: 1px solid;
+    border-radius: 0.5em;
+    font-size: x-large;
+    font-family: sans-serif;
+    text-align: center;
+    /* flex-grow: 0; */
+    align-self: center;
+    flex-shrink: 1;
+}
+.go-bt {
+    background-color: rgb(85, 126, 153);
+    color: white;
+    border-color: #555;
+    display: block;
+    padding: 0.5em;
+    margin: 0.5em 2em;
+    border: 1px solid;
+    border-radius: 0.5em;
+    font-size: x-large;
+    font-family: sans-serif;
+    text-align: center;
+    /* flex-grow: 0; */
+    align-self: center;
+    flex-shrink: 1;
+    text-decoration: none;
+}
+.go-bt:hover{
+    background-color: rgb(111, 187, 231);
+    border-color: rgb(119, 189, 255);
+}
+.go-bt:active{
+    background-color: rgb(85, 204, 184);
+    border-color: rgb(119, 255, 187);
+}
+.uid {
+    display: block;
+    padding: 0.3em;
+    margin: 0.7em 0.5em;
+    border: 1px solid;
+    border-radius: 0.5em;
+    font-size: large;
+    font-family: sans-serif;
+    text-align: center;
+    /* flex-grow: 0; */
+    align-self: center;
+    flex-shrink: 1;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+  }
+.c1+label {
+    color: rgb(247, 211, 207);
+    background-color: #444;
+}
+.c2+label {
+    color: rgb(252, 240, 205);
+    background-color: #444;
+}
+.c3+label {
+    color: rgb(235, 247, 202);
+    background-color: #444;
+}
+.c5+label {
+    color: rgb(198, 255, 214);
+    background-color: #444;
+}
+.c8+label {
+    color: rgb(215, 242, 255);
+    background-color: #444;
+}
+.c1:hover+label {
+    color: rgb(255, 127, 112);
+    background-color: #655;
+    border-color: #d43;
+}
+.c2:hover+label {
+    color: rgb(255, 213, 87);
+    background-color: #665;
+    border-color: #ca4;
+}
+.c3:hover+label {
+    color: rgb(207, 255, 86);
+    background-color: #565;
+    border-color: #ac4;
+}
+.c5:hover+label {
+    color: rgb(107, 255, 149);
+    background-color: #566;
+    border-color: #6d8;
+}
+.c8:hover+label {
+    color: rgb(95, 202, 255);
+    background-color: #556;
+    border-color: #9df;
+}
+.c1:checked+label {
+    background-color: #d43;
+    border-color: white;
+    color:black;
+}
+.c2:checked+label {
+    background-color: #ca4;
+    border-color: white;
+    color:black;
+}
+.c3:checked+label {
+    background-color: #ac4;
+    border-color: white;
+    color:black;
+}
+.c5:checked+label {
+    background-color: #6d8;
+    border-color: white;
+    color:black;
+}
+.c8:checked+label {
+    background-color: #9df;
+    border-color: white;
+    color:black;
+}
+
+.no+label {
+    background-color: #955;
+    color: #faa;
+    border-color: #755
+}
+.no:hover+label {
+    background-color: #833;
+    border-color: #c44;
+}
+.no:active+label {
+    background-color: #922;
+}
+.mx {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    max-width: fit-content;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+@media (min-width:960px) {
+    .flex-cont {
+        margin: auto;
+        max-width: 960px;
+    }
+    .bt-lab {
+        padding: 0.5em 0.2em;
+    }
+}

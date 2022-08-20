@@ -1,0 +1,65 @@
+.button {
+    float: left;
+    margin: 5px;
+    width: 6em;
+    height: 3em;
+    position: relative;
+}
+
+.button label,
+.button input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid gray;
+  border-radius: 12px;
+}
+
+.button input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100;
+}
+
+.button input[type="radio"]:checked + label {
+  background: cornflowerblue;
+}
+
+.button input[type="radio"]:hover + label {
+  background: lightskyblue;
+}
+
+.button label {
+  cursor: pointer;
+  z-index: 90;
+  line-height: 1.5em;
+  text-align: center;
+  vertical-align: baseline;
+  font-size: xx-large;
+  font-family: sans-serif;
+}
+input[type="submit"] {
+  background-color: maroon;
+  border: 1px solid gray;
+  /* display: block; */
+  width: 6em;
+  height: 3em;
+  align-self: center;
+}
+.flex-cats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

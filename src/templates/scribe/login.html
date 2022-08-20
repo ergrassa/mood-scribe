@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'scribe/flex.css' %}">
+  </head>
+  <body>
+    <div class="flex-cont">
+    <form method="post">
+        <div class="flex-cont">
+          <label for="id_username" class="col-head">User ID:</label>
+          <input type="text" class="uid" name="username" id="id_username" required />
+        </div>
+        <div class="flex-cont">
+          <label for="id_password" class="col-head">Password:</label>
+          <input type="password" class="uid" name="password" id="id_password" required />
+        </div>
+        {% csrf_token %}
+        <div class="flex-cont"><input type="submit" value="Login" class="go-bt"></div>
+    </form>
+  </div>
+  </body>
+</html>
