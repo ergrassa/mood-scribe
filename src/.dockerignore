@@ -2,5 +2,6 @@
 */backup*
 .restart-app
 .env
-*/db.sqlite3*
+db.sqlite3
 */.pyc*
+__pycache__

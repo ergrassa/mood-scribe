@@ -8,5 +8,5 @@ services:
     env_file:
       - ./.env
     ports:
-      - "80:80"
+      - "80"
     command: bash ./mood/startapp.sh

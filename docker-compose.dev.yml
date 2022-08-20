@@ -9,4 +9,6 @@ services:
       - ./.env
     ports:
       - "80:80"
+    # volumes:
+    #   - ./db:/app/mood/db
     command: bash ./mood/startapp.sh
