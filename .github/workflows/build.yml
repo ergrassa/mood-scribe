@@ -9,6 +9,7 @@ jobs:
     server-build:
         name: Server Build
         runs-on: ubuntu-latest
+        environment: "313"
         steps:
             - name: Check Out Repo
               uses: actions/checkout@v3
