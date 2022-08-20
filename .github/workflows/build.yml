@@ -1,0 +1,33 @@
+name: Build and push to DH
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    server-build:
+        name: Server Build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check Out Repo
+              uses: actions/checkout@v3
+
+            - name: Login to Docker Hub
+              uses: docker/login-action@v1
+              with:
+                  username: ${{ secrets.DH_USER }}
+                  password: ${{ secrets.DH_TOKEN }}
+
+            - name: Set up Docker Buildx
+              id: buildx
+              uses: docker/setup-buildx-action@v1
+
+            - name: Build and push
+              id: docker_build
+              uses: docker/build-push-action@v2
+              with:
+                  context: ./server
+                  file: ./src/Dockerfile
+                  push: true
+                  tags: ergrassa/mood-scribe:latest
