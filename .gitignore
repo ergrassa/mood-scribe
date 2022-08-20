@@ -1,0 +1,6 @@
+**/env
+**/backup
+.restart-app
+.env
+db.sqlite3
+.pyc
