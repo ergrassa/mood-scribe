@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i_25z8&h3lfyw-8t#t%x1lpbra4g_%tfxg8m6iops@ypj8-*vl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['313a.space']
 
 
 # Application definition
@@ -78,22 +78,22 @@ WSGI_APPLICATION = 'mood.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': os.environ['DBHOST'],
-#         'PORT': '3306',
-#         'NAME': os.environ['DBNAME'],
-#         'USER': os.environ['DBUSER'],
-#         'PASSWORD': os.environ['DBPASS']
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': os.environ['DBHOST'],
+        'PORT': '3306',
+        'NAME': os.environ['DBNAME'],
+        'USER': os.environ['DBUSER'],
+        'PASSWORD': os.environ['DBPASS']
+    }
+}
 
 
 # Password validation
