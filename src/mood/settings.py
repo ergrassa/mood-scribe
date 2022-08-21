@@ -22,13 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '___secretkey___'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECRET_KEY = 'DEVELOPMENT'
+# DEBUG = True
+# ALLOWED_HOSTS = ['*']
+
 DEBUG = False
-
 ALLOWED_HOSTS = ['313a.space']
-
+SECRET_KEY = '___secretkey___'
 
 # Application definition
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,7 +83,7 @@ WSGI_APPLICATION = 'mood.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db/db.sqlite3',
     }
 }
 # DATABASES = {
@@ -131,10 +133,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "scribe/static/",
-    'static/',
-]
+STATIC_ROOT = 'static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "scribe/static/",
+#     'static/',
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

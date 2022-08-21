@@ -7,6 +7,7 @@ dbh=os.environ['DBHOST']
 dbn=os.environ['DBNAME']
 dbu=os.environ['DBUSER']
 dbp=os.environ['DBPASS']
+
 dburl = f"mysql+mysqlconnector://{dbu}:{dbp}@{dbh}/{dbn}"
 
 def pull_records(uid):

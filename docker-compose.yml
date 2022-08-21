@@ -5,6 +5,8 @@ services:
     #   context: ./src
     #   dockerfile: ./Dockerfile
     image: ergrassa/mood-scribe:latest
+    volumes:
+      - ./db:/app/db
     env_file:
       - ./.env
     ports:
