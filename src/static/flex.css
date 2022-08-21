@@ -11,7 +11,8 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
-    margin: 0.2em 1em;
+    margin: auto;
+    max-width: 960px;
 }
 .flex-cats {
     display: flex;
@@ -247,12 +248,21 @@ body {
     padding-left: 2em;
     padding-right: 2em;
 }
-@media (min-width:960px) {
-    .flex-cont {
-        margin: auto;
-        max-width: 960px;
+@media screen and (max-device-width: 960px) {
+    .flex-cats {
+        flex-direction: column;
+    }
+    .flex-col {
+        flex-direction: row;
+        justify-content: flex-end;
     }
     .bt-lab {
-        padding: 0.5em 0.2em;
+        padding: 4vw 5vw;
+        font-size: 6vw;
+        margin: 1vw;
+        background-color: #595;
+    }
+    .col-head, .go-lab, .mx, .msg {
+        font-size: 3vw;
     }
 }

@@ -24,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECRET_KEY = 'DEVELOPMENT'
-# DEBUG = True
+# DEBUG = False
 # ALLOWED_HOSTS = ['*']
 
 DEBUG = False
 ALLOWED_HOSTS = ['313a.space']
 SECRET_KEY = '___secretkey___'
+CSRF_TRUSTED_ORIGINS = [f"https://{HOST}" for HOST in ALLOWED_HOSTS]
 
 # Application definition
 
